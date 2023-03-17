@@ -9,6 +9,8 @@ import Message from './Message';
 import Modal from './Modal';
 import css from './App.module.css';
 
+//  const img = document.querySelector('#root');
+
 function App() {
   const [contacts, setContacts] = useState([]);
   const [filter, setFilter] = useState('');
@@ -22,7 +24,9 @@ function App() {
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('contacts', JSON.stringify(contacts));
+    if (contacts.length > 0) {
+      localStorage.setItem('contacts', JSON.stringify(contacts));
+    }
   }, [contacts]);
 
   const addContact = ({ name, number }) => {
@@ -59,29 +63,31 @@ function App() {
   };
 
   return (
-    <div className={css.container}>
-      <h1 className={css.title}>
-        Phone<span className={css.title__color}>book</span>
-      </h1>
-      <button className={css.button} type="button" onClick={toggleModal}>
-        <span className={css.button__text}>Add new contact</span>{' '}
-        <BsFillPersonPlusFill size={20} />
-      </button>
-      {showModal && (
-        <Modal onClose={toggleModal} title="Add contact">
-          <ContactForm onSubmit={addContact} />
-        </Modal>
-      )}
-      <h2 className={css.subtitle}>Contacts</h2>
-      <Filter filter={filter} changeFilter={changeFilter} />
-      {contacts.length > 0 ? (
-        <ContactList
-          contacts={filtredContacts()}
-          onDeleteContact={deleteContact}
-        />
-      ) : (
-        <Message text="Contact list is empty." />
-      )}
+    <div className={css.img}>
+      <div className={css.container}>
+        <h1 className={css.title}>
+          Phone<span className={css.title__color}>book</span>
+        </h1>
+        <button className={css.button} type="button" onClick={toggleModal}>
+          <span className={css.button__text}>Add new contact</span>{' '}
+          <BsFillPersonPlusFill size={20} />
+        </button>
+        {showModal && (
+          <Modal onClose={toggleModal} title="Add contact">
+            <ContactForm onSubmit={addContact} />
+          </Modal>
+        )}
+        <h2 className={css.subtitle}>Contacts</h2>
+        <Filter filter={filter} changeFilter={changeFilter} />
+        {contacts.length > 0 ? (
+          <ContactList
+            contacts={filtredContacts()}
+            onDeleteContact={deleteContact}
+          />
+        ) : (
+          <Message text="Contact list is empty." />
+        )}
+      </div>
     </div>
   );
 }

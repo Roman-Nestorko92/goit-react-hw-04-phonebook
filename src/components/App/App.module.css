@@ -1,3 +1,10 @@
+.img {
+  background-image: url(./img/Krasivyi-fon-anime-ulitsa-noch-1-min.jpg);
+  background-repeat: no-repeat;
+  background-position: 100%;
+  background-size: cover;
+}
+
 .container {
   width: 320px;
   margin: 0 auto;
@@ -28,14 +35,14 @@
 }
 
 .title__color {
-  color: var(--accent-bg-color);
+  color: var(--main-phone-color);
 }
 
 .subtitle {
   font-size: 26px;
   text-transform: uppercase;
   font-weight: 900;
-  color: var(--main-text-color);
+  color: whitesmoke;
 
   margin-bottom: 30px;
 }
