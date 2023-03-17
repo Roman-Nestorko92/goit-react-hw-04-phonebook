@@ -11,7 +11,7 @@ function ContactList({ contacts, onDeleteContact }) {
             <Contact
               name={name}
               number={number}
-              onDeleteContact={onDeleteContact}
+              onDeleteContact={() => onDeleteContact(id)}
               contactId={id}
             />
           </li>
@@ -22,13 +22,11 @@ function ContactList({ contacts, onDeleteContact }) {
 }
 
 ContactList.prototype = {
-  contacts: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      number: PropTypes.string.isRequired,
-    })
-  ).isRequired,
+  contacts: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    number: PropTypes.string.isRequired,
+  }),
   onDeleteContact: PropTypes.func.isRequired,
 };
 

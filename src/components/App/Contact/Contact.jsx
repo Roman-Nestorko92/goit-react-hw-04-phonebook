@@ -9,7 +9,7 @@ function Contact({ name, number, onDeleteContact }) {
         <span className={css.icon}>
           <FaUserAlt />
         </span>
-        <p className={css.name}>{name}</p>
+        <p>{name}</p>
       </div>
       <div className={css.wrapper}>
         <p className={css.number}>{number}</p>
@@ -28,3 +28,4 @@ Contact.prototype = {
 };
 
 export default Contact;
+//className={css.name}
