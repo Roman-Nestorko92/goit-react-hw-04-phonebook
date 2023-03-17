@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/goit-react-hw-04-phonebook/static/css/main.fcb5c43d.css",
-    "main.js": "/goit-react-hw-04-phonebook/static/js/main.3550f4f5.js",
+    "main.css": "/goit-react-hw-04-phonebook/static/css/main.0241e5b9.css",
+    "main.js": "/goit-react-hw-04-phonebook/static/js/main.c4514406.js",
+    "static/media/Krasivyi-fon-anime-ulitsa-noch-1-min.jpg": "/goit-react-hw-04-phonebook/static/media/Krasivyi-fon-anime-ulitsa-noch-1-min.1e2ae23bcf74302ebb8c.jpg",
     "index.html": "/goit-react-hw-04-phonebook/index.html",
-    "main.fcb5c43d.css.map": "/goit-react-hw-04-phonebook/static/css/main.fcb5c43d.css.map",
-    "main.3550f4f5.js.map": "/goit-react-hw-04-phonebook/static/js/main.3550f4f5.js.map"
+    "main.0241e5b9.css.map": "/goit-react-hw-04-phonebook/static/css/main.0241e5b9.css.map",
+    "main.c4514406.js.map": "/goit-react-hw-04-phonebook/static/js/main.c4514406.js.map"
   },
   "entrypoints": [
-    "static/css/main.fcb5c43d.css",
-    "static/js/main.3550f4f5.js"
+    "static/css/main.0241e5b9.css",
+    "static/js/main.c4514406.js"
   ]
 }
